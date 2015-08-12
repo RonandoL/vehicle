@@ -7,7 +7,9 @@ class Dealership
     @cars = []
   end
 
-
+  define_method(:name) do
+    @name
+  end
 
 
 
