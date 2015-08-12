@@ -8,7 +8,7 @@ get('/') do
   erb(:index)
 end
 
-get('/see_vehicles') do
+get('/vehicles') do
   erb(:see_vehicles)
 end
 
