@@ -1,0 +1,17 @@
+<h2>See All of our vehicles below:</h2>
+
+<ul>    <!--  display each vehicle model as a link  -->
+
+  <% @vehicles.each() do |vehicle| %>
+
+    <li><a href="/vehicles/<%= vehicle.id() %>"> <%= vehicle.model() %> </li>
+
+  <% end %>
+</ul>
+
+
+<h1><%= @vehicle.make() %></h1>
+<h1><%= @vehicle.model() %></h1>
+<h1><%= @vehicle.year() %></h1>
+
+<a href="/"Home></a>
