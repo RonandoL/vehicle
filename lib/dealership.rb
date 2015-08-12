@@ -11,6 +11,13 @@ class Dealership
     @name
   end
 
+  define_singleton_method(:all) do
+    @@dealerships
+  end
+  # define_method(:id)do
+  # @id
+  # end
+
 
 
 
