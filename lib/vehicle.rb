@@ -37,4 +37,8 @@ class Vehicle
     @make
   end
 
+  define_method(:model) do
+    @model
+  end
+
 end
