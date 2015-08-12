@@ -4,7 +4,6 @@ require('./lib/vehicle')     # when copy pasting, change file name
 also_reload('lib/**/*.rb')
 
 get('/') do
-  # @xxxxx = xxxxx.all()
   erb(:index)
 end
 
@@ -21,11 +20,6 @@ end
       erb(:results)
     end
 
-get('/vehicle/:id') do
-  @vehicle = Vehicle.find(params.fetch("id").to_i())
-   erb(:vehicle)
-end
-
 post('/vehicles') do
   make = params.fetch("make")
   model = params.fetch("model")
@@ -33,4 +27,10 @@ post('/vehicles') do
   vehicle = Vehicle.new(make, model, year)
   vehicle.save()
   erb(:success)
+end
+
+
+get('/vehicles/:id') do
+  @vehicle = Vehicle.find(params.fetch("id").to_i())
+  erb(:vehicle)
 end
