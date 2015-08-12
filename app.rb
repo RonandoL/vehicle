@@ -8,6 +8,18 @@ get('/') do
   erb(:index)
 end
 
-post('/results') do
+get('/see_vehicles') do
+  erb(:see_vehicles)
+end
 
+get('/add_vehicle') do
+   erb(:add_vehicle)
+end
+
+    get('/results') do
+      erb(:results)
+    end
+
+get('/vehicle_page') do
+   erb(:vehicle_page)
 end
