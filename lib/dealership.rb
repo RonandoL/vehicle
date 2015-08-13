@@ -1,9 +1,9 @@
 class Dealership
-  @@dealerships = []
+  @@dealerships = []  # begins as empty array, will contain all of the dealership objects
 
 # Class Methods --------
 
-  define_singleton_method(:all) do
+  define_singleton_method(:all) do  # returns the @@dealerships array
     @@dealerships
   end
 
@@ -27,7 +27,7 @@ class Dealership
     @name = name
     @id = @@dealerships.length().+(1)
     @cars = []
-        # that begins as an empty array and will contain all of the vehicle objects for Dealership instance. It is returned in the method, cars.
+        # @ cars begins as an empty array and will contain all of the VEHICLE objects for Dealership instance. It is returned in the method .cars()
   end
 
   define_method(:name) do
