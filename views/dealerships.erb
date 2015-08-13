@@ -1,0 +1,14 @@
+<div class="jumbotron">
+	<h1>Dealerships</h1>	
+</div>
+
+<ul>
+
+	<% @dealerships.each() do |dealership| %>
+
+		<li><a href="/dealerships/<%=dealership.id() %>">
+		<%= dealership.name() %></a></li>
+	<% end %>
+</ul>
+
+<!-- Instead of looping through the vehicles and displaying linked vehicle models, we are looping through the dealerships and displaying linked dealership names. -->
